@@ -3,6 +3,7 @@ import Pokemon from "../models/pokemon";
 import PokemonCard from "../components/pokemon-card";
 import PokemonService from "../services/pokemon-service";
 import { useNavigate } from "react-router-dom";
+import PokemonSearch from "../components/pokemon-search";
 
 const PokemonList: FunctionComponent = () => {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -15,6 +16,7 @@ const PokemonList: FunctionComponent = () => {
   return (
     <div>
       <h1 className="center">Pokédex</h1>
+      <PokemonSearch />
 
       <div className="container">
         <div className="row">

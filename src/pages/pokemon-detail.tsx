@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import Loader from "../components/loader";
 import { formatDate, formatType } from "../helpers/lib";
 import Pokemon from "../models/pokemon";
 import PokemonService from "../services/pokemon-service";
@@ -88,7 +89,7 @@ const PokemonsDetail: FunctionComponent = () => {
           
         
       ) : (
-        <h4 className="center">Aucun pokémon à afficher !</h4>
+        <h4 className="center"><Loader/></h4>
       )}
     </div>
   );
